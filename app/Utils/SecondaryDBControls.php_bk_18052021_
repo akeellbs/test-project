@@ -1,0 +1,483 @@
+<?php
+
+ 
+
+ 
+
+namespace App\Utils;
+
+ 
+
+ 
+
+use Illuminate\Http\Request;
+
+use Illuminate\Support\Facades\DB;
+
+use phpDocumentor\Reflection\Types\Self_;
+
+ 
+
+class SecondaryDBControls
+
+{
+    const SEC_HOST          =    "52.33.91.137";
+
+    const SEC_USER          =    "NVXXI2LPNY======";
+
+    const SEC_PASS          =    "%@>##>(!>!#&@m@z0n";
+
+    const SEC_DB            =    "blueerp";
+
+ 
+
+    public static function connect_to_secondary(){
+        return mysqli_connect(self::SEC_HOST, self::SEC_USER, self::SEC_PASS, self::SEC_DB);
+    }
+
+	public static function delete_test_data($test_id){
+
+        $sql = "DELETE FROM tbl_sprresult WHERE testid ='".$test_id."'";
+        $result = mysqli_query(self::connect_to_secondary(), $sql);
+
+        $sql = "DELETE FROM tbl_testresult WHERE testid ='".$test_id."'";
+        $result = mysqli_query(self::connect_to_secondary(), $sql);
+		
+		$sql = "DELETE FROM tbl_test_analysis WHERE testid ='".$test_id."'";
+        $result = mysqli_query(self::connect_to_secondary(), $sql);
+
+        $sql = "DELETE FROM quiztable WHERE quizid ='".$test_id."'";
+        $result = mysqli_query(self::connect_to_secondary(), $sql);
+
+        $sql = "DELETE FROM tbl_result WHERE testid ='".$test_id."'";
+        $result = mysqli_query(self::connect_to_secondary(), $sql);
+
+        return $result;
+    }
+
+ 
+
+   public static function return_max_test_id(): string
+
+    {
+ 
+
+        $test_id = "0";
+
+ 
+
+        $sql = "SELECT testid FROM tbl_sprresult ORDER BY id DESC LIMIT 1";
+
+        $results = mysqli_query(self::connect_to_secondary(), $sql);
+ 
+
+        while($rows = mysqli_fetch_array($results)){
+
+            $test_id = $rows['testid'] + 1;
+
+ 
+
+        }
+
+ 
+
+        $id_test = DB::table('tbl_sprresult')->orderBy('testid', 'desc')->first();
+
+ 
+
+        if ($id_test!=null){
+ 
+
+            if ($test_id === $id_test->testid){
+                return $id_test->testid +1;
+
+            }
+
+            else{
+                if (($id_test->testid ) > $test_id){
+                    return $id_test->testid + 1 ;
+
+                }
+
+                else{
+ 
+
+                    return $test_id;
+
+                }
+
+ 
+
+            }
+
+ 
+
+        }
+
+        else{
+            return $test_id;
+
+        }
+
+ 
+
+ 
+
+ 
+
+    }
+
+	public static function insert_into_quiztable_erp($test_id): string
+    {
+
+        $sorted_array = DB::select("SELECT * FROM quiztable WHERE quizid ='".$test_id."'");
+        // $sorted_array = json_decode(json_encode($data), true);
+        $result_display = "Not Connected";
+        $sql ="";
+		$con = self::connect_to_secondary();
+        foreach ($sorted_array as $result){
+                $ex_sql = "SELECT * FROM quiztable where quizid = '".$result->quizid."'";
+                // $con = self::connect_to_secondary();
+				$ex_res = mysqli_query($con, $ex_sql); 
+                if(mysqli_num_rows($ex_res)<1){
+                        $sql .= "INSERT INTO quiztable(questionnumber, subject,correct,
+                                            mark,negmark, quizid, quiztype, 
+                                            class, qsubject )
+
+                            VALUES('".$result->questionnumber."',
+                            '".$result->subject."',
+                            '".$result->correct."',
+                            '".$result->mark."',
+                            '".$result->negmark."',
+                            '".$result->quizid."',
+                            '".$result->quiztype."',
+                            '".$result->class."',
+                            '".$result->qsubject."'
+                        );";
+
+                    }
+                }
+
+                
+                
+                if ($con){
+				//$con = self::connect_to_secondary();
+                if (mysqli_multi_query($con, $sql)) {
+                    $result_display = "New records created successfully";
+                        } 
+                else {
+                    $result_display =  "Error: " . $sql . "<br>" . mysqli_error(self::connect_to_secondary());
+                    }
+                }
+
+                else{
+                    die("ERROR: ".mysqli_error(self::connect_to_secondary()));
+                }
+			mysqli_close($con);
+            return $result_display;
+
+            }
+			
+			
+		public static function insert_into_tbl_test_analysis($test_id): string
+			{
+        $sorted_array = DB::select("SELECT * FROM tbl_test_analysis WHERE testid ='".$test_id."'");
+        //$sorted_array = json_decode(json_encode($data), true);
+        $result_display = "Not Connected";
+        $sql ="";
+		$con = self::connect_to_secondary();
+        foreach ($sorted_array as $result){
+                $ex_sql = "SELECT * FROM tbl_test_analysis where testid ='".$result->testid."'";
+                
+				$ex_res = mysqli_query($con, $ex_sql);                                     
+                if(mysqli_num_rows($ex_res)<1){
+                 $sql .= "INSERT INTO tbl_test_analysis(qno,testid, correct_attempt, in_correct_attempt)
+
+                            VALUES('".$result->qno."',
+
+                            '".$result->testid."',
+                            '".$result->correct_attempt."',
+
+                            '".$result->in_correct_attempt."'
+
+                        );";
+                    }
+                }
+            if ($con){
+                // $con = self::connect_to_secondary();
+                if (mysqli_multi_query($con, $sql)) {
+                    $result_display = "New records created successfully";
+                } 
+                else {
+                    $result_display =  "Error: " . $sql . "<br>" . mysqli_error(self::connect_to_secondary());
+                }
+            }
+
+            else{
+                die("ERROR: ".mysqli_error(self::connect_to_secondary()));
+            }
+			
+			mysqli_close($con);
+            return $result_display;
+    }
+    
+    public static function insert_into_tbl_result($test_id): string
+    {
+
+        $sorted_array = DB::select("SELECT * FROM tbl_result WHERE testid ='".$test_id."'");
+        // $sorted_array = json_decode(json_encode($data), true);
+        // dd($sorted_array);
+        $result_display = "Not Connected";
+        $sql ="";
+		$con = self::connect_to_secondary();
+        foreach ($sorted_array as $result){
+                $ex_sql = "SELECT * FROM tbl_result where email = '".$result->email."' and testid ='".$result->testid."'";
+                // $con = self::connect_to_secondary();
+                $ex_res = mysqli_query($con, $ex_sql);
+                //mysqli_close($con);                                    
+                if(mysqli_num_rows($ex_res)<1){
+                $sql .= "INSERT INTO tbl_result(totalquestion, maxmarks, attemptedquestion, notattemptedquestions,
+
+                            rightquestion, wrongquestion, obtainedmarks,
+
+                            email, subject, 
+                            wrongquestionsno, rightquestionsno, useranswers, 
+                            testid, class, testname, TestMode)
+
+                            VALUES('".$result->totalquestion."',
+
+                            '".$result->maxmarks."',
+
+                            '".$result->attemptedquestion."',
+
+                            '".$result->notattemptedquestions."',
+                            '".$result->rightquestion."',
+                            '".$result->wrongquestion."',
+                            '".$result->obtainedmarks."',
+                            '".$result->email."',
+                            '".$result->subject."',
+                            '".$result->wrongquestionsno."',
+                            '".$result->rightquestionsno."',
+                            '".$result->useranswers."',
+                            '".$result->testid."',
+                            '".$result->class."',
+                            '".$result->testname."',
+                            'OMR'
+
+                            
+
+                        );";
+                        
+            }
+
+    }		
+			//$con = self::connect_to_secondary();
+            if ($con){
+                // $con = self::connect_to_secondary();
+                if (mysqli_multi_query($con, $sql)) {
+                    $result_display = "New records created successfully";
+                } 
+                else {
+				
+                    $result_display =  "Error: " . $sql . "<br>" . mysqli_error(self::connect_to_secondary());
+                }
+            }
+
+            else{
+                die("ERROR: ".mysqli_error(self::connect_to_secondary()));
+            }
+			
+			mysqli_close($con);
+            return $result_display;
+
+ 
+}
+
+    public static function insert_into_spr_result($test_id): string
+
+    {
+ 
+
+        $sorted_array = DB::select("SELECT * FROM tbl_sprresult WHERE testid ='".$test_id."'");
+
+		
+
+        //$sorted_array = json_decode(json_encode($results), true);
+
+ 
+
+        $result_display = "Not Connected";
+
+                               
+
+        $sql ="";
+
+ 
+		$con = self::connect_to_secondary();
+        foreach ($sorted_array as $result){
+                               
+
+        $ex_sql = "SELECT * FROM tbl_sprresult where rollno = '".$result->rollno."' and testid ='".$result->testid."'";
+	
+        // $con = self::connect_to_secondary();
+        $ex_res = mysqli_query($con, $ex_sql);
+                                              
+        
+            if(mysqli_num_rows($ex_res)<1){
+            $sql .= " INSERT INTO tbl_sprresult(rollno, testid, stream,  phymarks,
+
+                          chemmarks, mathsmarks, phymaxmarks,
+
+                          chemmaxmarks, mathsmaxmarks, phypercent,
+
+                          chempercent, mathspercent, overallmarks,
+
+                          overallmaxmarks, overallpercent, uploadingdate,
+
+                          phyhighest, chemhighest, mathshighest, overallhighest,
+
+                          phylowest, chemlowest, mathslowest, overalllowest,
+
+                          phyaverage, chemaverage, mathsaverage, overallaverage,
+
+                          mode, testdate, overallrank, mathsrank, phyrank, chemrank, overallcrank, 
+                          
+                          studentsappeared, testname, biohighest, biopercent, biomaxmarks, biomarks, 
+						  
+						  bioaverage, biorank, expectedrank, type, paper, class, course)
+                    
+                   VALUES('".$result->rollno."',
+
+                    '".$result->testid."',
+
+                    '".$result->stream."',
+
+                    '".$result->phymarks."',
+
+                    '".$result->chemmarks."',
+
+                    '".$result->mathsmarks."',
+
+                    '".$result->phymaxmarks."',
+
+                    '".$result->chemmaxmarks."',
+
+                    '".$result->mathsmaxmarks."',
+
+                    '".$result->phypercent."',
+
+                    '".$result->chempercent."',
+
+                    '".$result->mathspercent."',
+
+                    '".$result->overallmarks."',
+
+                    '".$result->overallmaxmarks."',
+
+                    '".$result->overallpercent."',
+
+                    '".$result->uploadingdate."',
+
+                    '".$result->phyhighest."',
+
+                    '".$result->chemhighest."',
+
+                    '".$result->mathshighest."',
+
+                    '".$result->overallhighest."',
+
+                    '".$result->phylowest."',
+
+                    '".$result->chemlowest."',
+
+                    '".$result->mathslowest."',
+
+                    '".$result->overalllowest."',
+
+                    '".$result->phyaverage."',
+
+                    '".$result->chemaverage."',
+
+                    '".$result->mathsaverage."',
+
+                    '".$result->overallaverage."',
+
+                    'OMR',
+
+                    '".$result->testdate."',
+
+                    '".$result->overallrank."',
+
+                    '".$result->mathsrank."',
+
+                    '".$result->phyrank."',
+
+                    '".$result->chemrank."',
+
+                    '".$result->overallcrank."',
+
+                    '".$result->studentsappeared."',
+
+                    '".$result->testname."',
+
+                    '".$result->biohighest."',
+
+                    '".$result->biopercent."',
+
+                    '".$result->biomaxmarks."',
+
+                    '".$result->biomarks."',
+
+                     '".$result->bioaverage."',
+
+                     '".$result->biorank."',
+					 
+					 '',
+                     
+                    '".$result->type."' ,
+					'".$result->paper."',
+					'".$result->class."',
+					'".$result->course."'
+
+                    );";
+
+				
+             }
+
+        }
+
+                               
+
+            if ($con){
+
+				//$con = self::connect_to_secondary();
+                if (mysqli_multi_query($con, $sql)) {
+                $result_display = "New records created successfully";
+
+            } else {
+                $result_display =  "Error: " . $sql . "<br>" . mysqli_error(self::connect_to_secondary());
+
+            }
+
+        }
+
+        else{
+            die("ERROR: ".mysqli_error(self::connect_to_secondary()));
+
+        }
+
+ 
+
+ 
+		mysqli_close($con);
+        return $result_display;
+
+ 
+
+    }
+
+ 
+
+}
+
+ 
