@@ -1,0 +1,250 @@
+.page_title h3,
+.best_selection_ratio h1 {
+  font-size: 40px;
+  color: #b50303;
+  font-weight: 700;
+  padding: 15px;
+}
+.best_selection_ratio {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.custom_container {
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.btn_template_main {
+  background: #ffb606 !important;
+  border: 0 !important;
+  color: #000 !important;
+}
+
+.fastest {
+  width: 100% !important;
+}
+
+.table-bordered td,
+.table-bordered th {
+  vertical-align: middle !important;
+}
+
+.inner_content h1 {
+  padding: 0px !important;
+}
+
+.load_pdf {
+  padding-left: 0 !important;
+}
+
+.download_pdf {
+  padding: 1rem;
+  border: 1px solid #000;
+  text-align: center;
+  font-weight: bold;
+}
+
+.download_pdf h4 {
+  margin-top: 5px;
+}
+
+.about_img {
+  margin-bottom: 1rem;
+}
+
+#formSubmitBtn {
+  background: #ffb606;
+  font-weight: 600;
+  color: #000;
+  text-transform: uppercase !important;
+}
+
+.amrit-banner {
+  padding: 2rem 0;
+}
+
+.amrit-banner img {
+  width: 100%;
+}
+
+.mobile-ad {
+  display: none;
+}
+
+.modal-body {
+  padding: 0.5rem !important;
+}
+
+.fontname {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.inner_content p {
+  line-height: 25px;
+  font-size: 16px;
+}
+
+.inner_content h4 {
+  font-weight: 600;
+}
+
+.inner_content ul,
+.inner_content ol {
+  font-size: 16px;
+}
+
+.inner_content ul {
+  list-style: disc;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.timer h3 {
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.signup h1 {
+  max-width: 350px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 26px;
+}
+
+.counter {
+  display: flex;
+  max-width: fit-content;
+  gap: 0.5em;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+.counter__box {
+  text-align: center;
+  background: blue;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.25rem;
+}
+
+.counter__time {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.counter__duration {
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  margin: 0;
+  padding: 0;
+  color: #eee;
+}
+
+.black-white {
+  background: linear-gradient(
+    to top,
+    #b50303 0%,
+    #000000 50%,
+    #4d707f 50%,
+    #4d707f 100%
+  );
+}
+
+.sky-blue {
+  background: linear-gradient(
+    to top,
+    #b50303 0%,
+    #000000 50%,
+    #4d707f 50%,
+    #4d707f 100%
+  );
+}
+.buttonIn button {
+  top: 5px !important;
+}
+
+.fastest {
+  width: 550px;
+  height: 315px;
+}
+
+.sec_heading {
+  background: #b50303;
+  padding: 10px;
+  color: white;
+}
+
+.rank-predictor {
+  color: white;
+  animation: blink 500ms linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.rank-predictor:hover {
+  color: white;
+}
+
+
+.main .modal-dialog {
+  max-width: 555px !important;
+}
+
+@media screen and (max-width: 767px) {
+  .mobile-ad {
+    display: block;
+  }
+
+  .desktop-ad {
+    display: none;
+  }
+
+  .btn_template_main {
+    font-size: 12px !important;
+  }
+
+  .table-bordered th {
+    font-size: 12px !important;
+  }
+
+  .download_pdf {
+    margin-top: 1rem;
+  }
+
+  .download_pdf h4,
+  .load_pdf {
+    text-align: center;
+  }
+
+  .fastest {
+    width: 100%;
+    height: 315px;
+  }
+}

@@ -1,0 +1,11 @@
+# Ignore everything
+node_modules
+#build
+.dockerignore
+#gitlab-runner.exe
+Dockerfile
+
+
+
+# Do not ignore the 'build' directory
+#!build/

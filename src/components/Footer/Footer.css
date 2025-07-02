@@ -1,0 +1,16 @@
+.footer{
+    padding: 1rem;
+}
+
+.footer h2 {
+    font-family: Poppins;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0;
+    color: black;
+    text-align: center;
+}
+
+.footer h2 span {
+    color: #910001;
+}

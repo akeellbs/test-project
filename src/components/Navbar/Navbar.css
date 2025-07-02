@@ -1,0 +1,134 @@
+.header {
+  z-index: 99;
+  top: 0;
+  width: 100%;
+  background: #290404;
+  padding: 15px 0;
+}
+.navbar-brand {
+  width: 150px;
+  height: 40px;
+}
+.navbar-brand img {
+  margin-top: -0.7rem;
+  width: 100%;
+  height: auto !important;
+  max-width: 100% !important;
+}
+
+.header_menu .close_button {
+  display: none;
+}
+.header .custom_container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 85%;
+  margin: 0 auto;
+}
+.header_menu ul.level-1 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  height: 100%;
+}
+.header_menu ul.level-1 {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+.header_menu ul.level-1 span {
+  cursor: pointer;
+  padding: 5px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.header_menu ul.level-1 > li {
+  margin: 0 10px;
+  color: #fff;
+  position: relative;
+}
+.header_menu ul.level-1 ul.level-2 {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s linear;
+}
+
+.header_menu ul.level-1 > li ul.level-2 {
+  position: absolute;
+  top: 100%;
+  width: 240px;
+  background: #fff;
+  color: #000;
+  padding: 7px;
+  z-index: 1;
+  box-shadow: rgb(0 0 0 / 12%) 0 1px 3px, rgb(0 0 0 / 24%) 0 1px 2px;
+  border-radius: 5px;
+}
+
+.header_menu ul.level-1 ul.level-2 {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s linear;
+}
+
+.header_menu ul.level-1 ul.level-2 {
+  transform: rotateY(-90deg);
+}
+
+.header_menu ul.level-1 > li:hover > ul.level-2,
+.header_menu ul.level-1 ul.level-2 > li:hover > ul.level-2 {
+  transform: rotateX(0deg);
+}
+
+.header_menu ul.level-1 > li:hover > ul.level-2,
+.header_menu ul.level-1 ul.level-2 > li:hover > ul.level-2 {
+  visibility: visible;
+  opacity: 1;
+}
+
+.header_menu ul.level-1 .level-2 > li {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #aaaaaa1f;
+}
+
+.header_menu ul.level-1 > li ul li a {
+  color: #000;
+  display: block;
+  padding: 5px;
+  transition: 0.4s linear;
+}
+.header_menu ul.level-1 li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.header_menu ul.level-2 > li > ul {
+  left: 230px;
+  top: 0 !important;
+  font-size: 17px;
+}
+
+@media (min-width: 992px) {
+  .mobile_button {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .header_menu .fa-angle-right {
+    display: inline-block !important;
+  }
+  .header_menu ul.level-1 li span,
+  .header_menu ul.level-1 > li button {
+    color: #290404;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

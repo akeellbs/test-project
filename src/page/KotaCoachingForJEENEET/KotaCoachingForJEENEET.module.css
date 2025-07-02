@@ -1,0 +1,883 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Leckerli+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Leckerli+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap);
+
+html {
+    scroll-behavior: smooth
+}
+
+.section_header {
+    background: url(https://cdn.motion.ac.in/ssp/img/kota-coaching-latest-img/kota-banner.jpg) 0 0/cover no-repeat;
+    padding: 4rem 2rem 2rem;
+    position: relative;
+}
+
+.logo-section {
+    padding: 1rem 2rem;
+}
+
+/* .section_8 {
+    padding: 1rem;
+}
+
+.section_8 h2 {
+    font-family: Poppins;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.section_8 h2 span {
+    color: #910001;
+} */
+
+.title_bar h1 {
+    font-family: Lato;
+    font-size: 89.23px;
+    font-weight: 800;
+    line-height: 107.08px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+    padding: 0;
+    margin: 0;
+}
+
+.title_bar h1 span {
+    color: #FFD028;
+}
+
+.prep {
+    font-family: Lato;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    color: #fff;
+}
+
+.for_class {
+    background: #FFD028;
+    font-family: Lato;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 37px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #121212;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.regss_form {
+    box-shadow: 2px 4px 20px 0 #240b3733;
+    background-color: #fff;
+    border: .1px solid #989898;
+    border-radius: 12px;
+    width: 400px;
+    margin: auto;
+    padding: 1rem 0.5rem;
+}
+
+.regss_form h2{
+    font-family: Lato;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.btn_submit {
+    font-family: Lato;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    line-height: 24px !important;
+    letter-spacing: 0 !important;
+    text-align: center !important;
+    color: #fff !important;
+    margin-top: 1rem;
+    background: linear-gradient(0deg, #d40000, #d40000), linear-gradient(180deg, #e60000 0, #bb0101 100%) !important
+}
+
+.regss_form .form-group {
+    margin-bottom: 1rem;
+}
+
+.button-toggle {
+    display: flex;
+    max-width: 30%;
+    background-color: #F6F6F7;
+    border-radius: 5px;
+    margin: 2rem auto;
+    border: 1px solid #CECECE;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.button-toggle button {
+    padding: .5rem;
+    background: inherit;
+    outline: 0;
+    border: none;
+    border-radius: 0px;
+    transition: .1s ease-out
+}
+
+
+.section_1 {
+    padding: 4rem 2rem;
+}
+
+.section_1 h3 {
+    font-family: Lato;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 34px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #D30105;
+    margin-bottom: 4rem;
+}
+
+.whatmake_left .para {
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #2D2D2D;
+}
+
+.motion_building {
+    width: 100%;
+}
+
+.section_2 {
+    padding: 4rem 2rem;
+    background: url(https://cdn.motion.ac.in/ssp/img/kota-coaching-latest-img/union.png) 0 0/cover no-repeat;
+}
+
+.section_2 h3 {
+    font-family: Lato;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 34px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #D30105;
+    margin-bottom: 4rem;
+}
+
+.batch {
+    text-align: center;
+    border: 0.18px solid #BBBBBB;
+    box-shadow: 0px 1.75px 10.51px 0px #68686833;
+    border-radius: 24px;
+    padding: 20px 10px;
+    transition: 0.5s;
+    margin-bottom: 2rem;
+}
+
+.batch:hover {
+    transform: scale(1.1);
+}
+
+.nurture {
+    font-family: Lato;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #112F6E;
+    margin-top: 2rem;
+}
+
+.targett {
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #4C4C4C;
+}
+
+.for_student {
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.4px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #696969;
+}
+
+.export {
+    font-family: Lato;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 18px;
+    letter-spacing: 0.12em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #D5010F;
+}
+
+.vector {
+    transition: 0.5s;
+    transform: translateX(0px);
+}
+
+.export:hover {
+    color: #D5010F;
+}
+
+.export:hover .vector {
+    transform: translateX(10px);
+}
+
+
+.section_3 {
+    padding: 4rem 2rem;
+}
+
+.section_3 h3 {
+    font-family: Lato;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 34px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #D30105;
+    margin-bottom: 4rem;
+}
+
+.why_chose_img {
+    border: 1px solid #F5D9D9;
+    box-shadow: 0px 4px 12px 0px #C0C0C040;
+    background: linear-gradient(180deg, #FFF0F0 0%, #FFE8DD 100%);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    margin: auto;
+}
+
+.number {
+    font-family: Lato;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26.4px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #121212;
+    margin-top: 1rem;
+}
+
+.details {
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #3D3D3D;
+    margin-top: 1rem;
+}
+
+.section_4 {
+    padding: 4rem 2rem;
+    background-color: #FFFDF6;
+    position: relative;
+}
+
+.section_4 h3 {
+    font-family: Lato;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 48px;
+    letter-spacing: .01em;
+    margin-bottom: 0rem;
+    color: #D30105;
+}
+
+.yellow_group {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+}
+
+.section_4 h4 {
+    font-family: Lato;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 40.8px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #280000;
+    margin-bottom: 2rem;
+}
+
+.section_4 h4 span {
+    color: #C41924;
+}
+
+.learning_app h3,
+.learning_app h4 {
+    display: none;
+}
+
+.learning_app {
+    width: 90%;
+    margin: auto;
+    margin-top: 0rem;
+    text-align: center;
+}
+
+.motion-faq {
+    width: 100%;
+}
+
+/* .best_place {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.nv_sir {
+    width: 100%;
+}
+
+.best_place ul li {
+    font-family: Lato;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #2D2D2D;
+    margin-bottom: 2rem;
+}
+
+.best_place ul li span {
+    font-weight: 600;
+    color: #C41924;
+
+}
+
+.course_fe_mob,
+.mla-heading_mob,
+.mobile,
+.nv-sir-mob,
+.nv-sir-mob_1,
+.result-mobile,
+.whatsapp_link {
+    display: none
+}
+
+.btn_regi {
+    font-family: Lato;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    line-height: 24px !important;
+    letter-spacing: 0 !important;
+    padding: .5rem 4rem !important;
+    color: #fff !important;
+    margin-top: 2rem;
+    background: linear-gradient(0deg, #d40000, #d40000), linear-gradient(180deg, #e60000 0, #bb0101 100%) !important
+}
+
+.proceed_btn,
+.right p span {
+    font-weight: 600
+}
+
+.mla-heading {
+    display: block
+}
+
+.thank_you_message{
+    padding: 8rem 0;
+    text-align: center;
+}
+
+.thankyou_text{
+    color: #000;
+    padding-top: 0;
+    text-align: center;
+    font-size: 20px
+}
+
+.thankyou_title {
+    font-family: Newsreader;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 45px;
+    letter-spacing: .01em;
+    color: #189a03;
+    text-align: center
+}
+
+.modal-body .para_model {
+    font-family: Lato;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: .01em;
+    text-align: center;
+    width: 600px;
+    margin: auto auto 2rem;
+}
+
+.course_page {
+    border-radius: 12px;
+    padding: 2rem 1rem;
+}
+
+.btn_page {
+    background: linear-gradient(180deg, #ec0715 0, #c8010d 100%, #c2010d 100%) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 3px 0 #00000038;
+    border-radius: 28px !important;
+    margin-bottom: 1rem;
+    width: 100%;
+    font-family: Lato !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    line-height: 26px !important;
+    letter-spacing: 0 !important;
+    text-align: center !important;
+    padding: 10px 0 !important;
+}
+
+
+.course_page p {
+    font-family: Mulish;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0;
+}
+
+.right p,
+.right p span {
+    font-family: Lato;
+    letter-spacing: .01em
+}
+
+.modal-body p,
+.right p,
+.right p span {
+    font-size: 18px;
+    text-align: center
+}
+
+.right p,
+.right p span {
+    line-height: 24px
+}
+
+.right p {
+    font-weight: 400
+}
+
+.proceed_btn {
+    background-color: #940001 !important;
+    border: 1px solid #940001 !important;
+    border-radius: 8px !important;
+    color: #fff !important;
+    margin-top: 1rem;
+    font-family: Montserrat;
+    font-style: normal;
+    line-height: .5 !important;
+    font-size: 24px !important;
+    padding: .75rem !important
+}
+
+.modal-dialog {
+    max-width: 860px !important;
+}
+
+.mycoupon {
+    display: flex;
+    width: 50%;
+    margin: auto
+}
+
+.apply_button {
+    background: #ddd !important;
+    color: #4d4d4d !important;
+    font-family: Lato !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: 19.2px !important
+}
+
+.section_5 {
+    padding: 4rem 2rem;
+}
+
+.section_5 h2 {
+    font-family: Lato;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 52px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #D30105;
+    margin-bottom: 2rem;
+}
+
+.student_say img {
+    width: 100%;
+}
+
+.section_5 .slick-slide {
+    height: auto !important;
+}
+
+.fa-arrow-left,
+.fa-arrow-right {
+    line-height: 40px !important;
+}
+
+
+@media (max-width:1024px) {
+    .title_bar h1 {
+        font-size: 65px;
+        line-height: 75px;
+    }
+
+    .prep {
+        font-size: 50px;
+        line-height: 60px;
+    }
+
+    .regss_form {
+        width: 320px;
+    }
+
+    .benefit {
+        margin-bottom: 2rem;
+        min-height: 270px;
+        width: 100%;
+    }
+}
+
+@media (max-width:768px) {
+    .section_header {
+        padding: 4rem 0rem 2rem;
+    }
+
+    .title_bar h1 {
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    .prep {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .for_class {
+        font-size: 18px;
+    }
+
+    .button-toggle {
+        max-width: 50%;
+    }
+
+    .package {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width:767px) {
+    .section_header {
+        padding: 2rem 0rem 2rem;
+    }
+
+    .title_bar h1 {
+        text-align: center;
+    }
+
+    .prep {
+        text-align: center;
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    .for_class {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 14px;
+    }
+
+    .para {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .title_bar {
+        text-align: center;
+    }
+
+    .regss_form {
+        width: 100%;
+    }
+
+    .section_1 h3 {
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 40px;
+        margin-bottom: 2rem;
+    }
+
+    .whatmake_left .para {
+        text-align: center;
+    }
+
+    .section_2 h3 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .batch {
+        margin-bottom: 2rem;
+    }
+
+
+    .section_3 h3 {
+        font-family: Lato;
+        font-size: 35px;
+        font-weight: 800;
+        line-height: 40px;
+    }
+
+    .section_3 {
+        padding: 2rem 0rem;
+    }
+
+    .section_1,
+    .section_4 {
+        padding: 2rem 0rem;
+    }
+
+    .button-toggle {
+        max-width: 80%;
+    }
+
+    .section_5 {
+        padding: 2rem 0rem 4rem;
+    }
+
+    .section_2 {
+        padding: 2rem 0rem;
+    }
+
+    .course_fe_mob,
+    .feature h3 {
+        text-align: center;
+    }
+
+    .section_9 {
+        padding: 2rem 0rem;
+    }
+
+    .cuet_text p {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .section_5 h3 {
+        font-size: 26px;
+    }
+
+    .feature ul li {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .section_4 h3 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .section_4 h4 {
+        font-size: 28px;
+        font-weight: 700;
+        text-align: center;
+        line-height: 38px;
+    }
+
+    .best_place ul li {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .section_9 h3 {
+        font-size: 24px;
+    }
+
+    .nv-sir {
+        display: none;
+    }
+
+    .course_fe {
+        display: none;
+    }
+
+    .features_mob {
+        order: 2;
+    }
+
+    .nv-sir-mob {
+        display: block;
+        width: 100%;
+    }
+
+    .feature {
+        margin-top: 1rem;
+    }
+
+    .course_fe_mob {
+        display: block;
+    }
+
+    .best_place {
+        order: 2;
+    }
+
+    .best_pl h3,
+    .best_pl h4 {
+        display: none;
+    }
+
+    .learning_app h3,
+    .learning_app h4 {
+        display: block;
+    }
+
+    .impotance {
+        order: 2;
+    }
+
+    .section_5 .slick-arrow {
+        display: block !important;
+    }
+
+    .section_5 .slick-next:before,
+    .slick-prev:before {
+        color: #a30000 !important;
+        font-size: 40px !important;
+    }
+
+    .slick-next,
+    .slick-prev {
+        top: 100% !important;
+    }
+
+    .slick-prev {
+        left: 30% !important;
+    }
+
+    .slick-next {
+        right: 40% !important;
+    }
+
+    .title_bar .para,
+    .section_3 .para {
+        text-align: center;
+    }
+
+    .why_row {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .why_row .number {
+        order: -2;
+    }
+
+    .why_row .why_chose_img {
+        order: -1;
+    }
+
+    .right h4 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .modal-body .para_model {
+        width: 100%;
+    }
+
+    .batch:hover {
+        transform: scale(1);
+    }
+}
+
+@media (max-width:390px) {
+    .for_class {
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width:375px) {
+    .title_bar h1 {
+        font-size: 35px;
+    }
+
+    .for_class {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}

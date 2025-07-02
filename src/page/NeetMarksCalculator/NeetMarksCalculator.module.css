@@ -1,0 +1,144 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Leckerli+One&family=Mukta:wght@200;300;400;500;600;700;800&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Leckerli+One&family=Mukta:wght@200;300;400;500;600;700;800&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap);
+.regss_form h2,
+.regss_form p {
+  text-align: center;
+  font-family: Lato;
+  letter-spacing: 0.01em;
+}
+.regss_form h2,
+.regss_form p,
+.right h4 {
+  letter-spacing: 0.01em;
+}
+html {
+  scroll-behavior: smooth;
+}
+.section_header {
+  background: url(https://cdn.motion.ac.in/ssp/img/neet_paper_omr_img/omr-banner.jpg)
+    0 0 / cover no-repeat;
+  padding: 4rem 2rem 5rem;
+  position: relative;
+}
+.regss_form {
+  box-shadow: 2px 4px 20px 0 #240b3733;
+  padding: 1rem;
+  background-color: #fff;
+  border: 0.1px solid #989898;
+  border-radius: 12px;
+  width: 100%;
+  margin: auto;
+}
+.regss_form h2 {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 28.8px;
+  color: #10348f;
+}
+.regss_form p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.2px;
+  color: #2d2d2d;
+}
+.btn_submit {
+  font-family: Lato;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  line-height: 24px !important;
+  letter-spacing: 0 !important;
+  text-align: center !important;
+  color: #fff !important;
+  margin-top: 1rem;
+  background: linear-gradient(0deg, #d40000, #d40000),
+    linear-gradient(180deg, #e60000 0, #bb0101 100%) !important;
+}
+.regss_form .form-group {
+  margin-bottom: 0.5rem;
+}
+.thank_neet_message {
+  padding: 4rem 0;
+}
+.thankyou_title {
+  font-family: Newsreader;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 45px;
+  color: #189a03;
+  text-align: center;
+}
+
+.thankyou_text {
+  color: #000;
+  padding-top: 0;
+  line-height: 26px;
+}
+.modal-body p,
+.thankyou-text p {
+  text-align: center;
+  font-size: 16px;
+}
+
+.thankyou {
+  margin-top: 8rem;
+}
+.thankyou-head {
+  padding: 4rem 2rem 6rem !important;
+}
+.modal-body p {
+  margin-bottom: 1.5rem;
+}
+.proceed_btn {
+  background-color: #940001 !important;
+  border: 1px solid #940001 !important;
+  border-radius: 8px !important;
+  color: #fff !important;
+  margin-top: 0;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 0.5 !important;
+  font-size: 20px;
+  padding: 0.75rem !important;
+}
+.logo-section {
+  padding: 1rem;
+}
+.navbar-brand img {
+  position: relative;
+  top: -10px;
+}
+.whatsapp_link {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .thankyou-text {
+    padding: 6rem 0;
+  }
+  .right h4 {
+    font-size: 31px;
+    line-height: 41px;
+  }
+}
+@media (max-width: 768px) {
+  .right h4 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .thankyou-text {
+    padding: 4rem 0;
+  }
+}
+@media (max-width: 767px) {
+  .section_header {
+    padding: 2rem 0;
+    height: auto;
+  }
+  .thankyou-text {
+    padding: 4rem 0;
+  }
+}

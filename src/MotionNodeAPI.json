@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "b550e04c-b8d1-475a-b76f-b571acd790ac",
+		"name": "Motion Node",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36837681"
+	},
+	"item": [
+		{
+			"name": "1. insertData",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"stname\":\"Rajkumar\",\r\n    \"stemail\":\"rjkumarjain@gmail.com\",\r\n    \"stmob\":\"9856741230\",\r\n    \"classs\":\"12th pass\",\r\n    \"course\":\"Neet\",\r\n    \"fromwhere\":\"Kota Coaching For Jee Neet\",\r\n    \"utm_source\":\"google\",\r\n    \"utm_medium\":\"google\",\r\n    \"utm_campaign\":\"google\",\r\n    \"utm_term\":\"google\",\r\n    \"utm_content\":\"google\",\r\n    \"center_names\":\"Kota\",\r\n    \"dat\":\"2025-01-13 15:27:56\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4005/insertData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4005",
+					"path": [
+						"insertData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. showData",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4005/showData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4005",
+					"path": [
+						"showData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. showNEETPaper",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4005/showNEETPaper",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4005",
+					"path": [
+						"showNEETPaper"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
